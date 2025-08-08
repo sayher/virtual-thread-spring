@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: virtual-thread
+  datasource:
+    url: jdbc:oracle:thin:@172.21.21.35:1521/JDBDEVDB.JDB.LOCAL
+    username: JDBMBAPIUAT
+    password: MbApiUat#35
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connectionTimeout: 300000
+      minimumIdle: 1
+      maximumPoolSize: 1
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      autoCommit: true
+      poolName: test-virtual-thread
+  jpa:
+    properties:
+      hibernate:
+        proc.param_null_passing: true
